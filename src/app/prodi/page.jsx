@@ -1,5 +1,5 @@
 "use client";
-import styles from "./page.module.css";
+import styles from './page.module.css';
 import { useEffect, useState } from 'react';
 
 export default function ProdiPage() {
@@ -93,13 +93,16 @@ export default function ProdiPage() {
             </div>
 
             <div>
-              <input
-                type="text"
+              <select
                 value={kepala}
                 onChange={(e) => setKepala(e.target.value)}
-                placeholder="Masukkan Kepala"
                 required
-              />
+              >
+                <option value="">Pilih Kepala</option>
+                <option value="William Wendy">William Wendy</option>
+                <option value="Marvello">Marvello</option>
+                <option value="Brian Sebastian">Brian Sebastian</option>
+              </select>
             </div>
 
             <button type="submit" className={styles.button}>
